@@ -6,4 +6,12 @@
   .no-print {
     display: none !important;
   }
+
+  .break-after-page {
+    break-after: page;
+  }
+
+  body {
+    background: white;
+  }
 }
