@@ -7,6 +7,8 @@
     "dev": "wrangler dev",
     "build": "tsc -p tsconfig.json --noEmit",
     "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "biome check .",
     "deploy": "wrangler deploy",
     "db:generate": "drizzle-kit generate",
     "db:migrate:local": "wrangler d1 migrations apply art-catalogue --local",
@@ -23,6 +25,7 @@
     "typescript": "^5.5.0",
     "drizzle-kit": "^0.22.0",
     "wrangler": "^3.60.0",
-    "@cloudflare/workers-types": "^4.20240718.0"
+    "@cloudflare/workers-types": "^4.20240718.0",
+    "vitest": "^2.0.0"
   }
 }
