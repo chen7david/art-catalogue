@@ -3,8 +3,12 @@ main = "src/index.ts"
 compatibility_date = "2026-08-01"
 compatibility_flags = ["nodejs_compat"]
 
+# NOTE: these are placeholder UUIDs so `wrangler dev` works locally.
+# Before deploying, run `wrangler d1 create art-catalogue` and replace
+# both IDs below with the real database ID it outputs.
 [[d1_databases]]
 binding = "DB"
 database_name = "art-catalogue"
-database_id = "REPLACE_WITH_D1_DATABASE_ID"
+database_id = "00000000-0000-0000-0000-000000000000"
+preview_database_id = "00000000-0000-0000-0000-000000000000"
 migrations_dir = "drizzle"
