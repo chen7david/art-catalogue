@@ -4,22 +4,24 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
-    "build": "tsc -p tsconfig.json",
-    "typecheck": "tsc --noEmit"
+    "dev": "wrangler dev",
+    "build": "tsc -p tsconfig.json --noEmit",
+    "typecheck": "tsc --noEmit",
+    "deploy": "wrangler deploy",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate:local": "wrangler d1 migrations apply art-catalogue --local",
+    "db:migrate:remote": "wrangler d1 migrations apply art-catalogue --remote"
   },
   "dependencies": {
     "hono": "^4.5.0",
-    "@hono/node-server": "^1.11.0",
     "drizzle-orm": "^0.31.0",
-    "better-sqlite3": "^11.0.0",
     "zod": "^3.23.0",
     "@art-catalogue/shared": "workspace:*"
   },
   "devDependencies": {
-    "tsx": "^4.16.0",
     "typescript": "^5.5.0",
     "drizzle-kit": "^0.22.0",
-    "@types/better-sqlite3": "^7.6.0"
+    "wrangler": "^3.60.0",
+    "@cloudflare/workers-types": "^4.20240718.0"
   }
 }
